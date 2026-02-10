@@ -3,17 +3,17 @@ title: Code Structure
 description: Enso Browser Code Structure and Preference Management
 ---
 
-The Enso Browser is a fork of Firefox with custom features like vertical tabs, workspaces, and themes. The source code is organized in the `src/` directory, with patches and custom implementations for Zen-specific features.
+The Enso Browser is a fork of Firefox with custom features like vertical tabs, workspaces, and themes. The source code is organized in the `src/` directory, with patches and custom implementations for Enso-specific features.
 
 ## Main Directories
-- **src/zen/**: Contains Zen-specific features.
-  - `workspaces/`: Implements workspace functionality (e.g., ZenWorkspaces.mjs, ZenWorkspace.mjs).
+- **src/enso/**: Contains Enso-specific features.
+  - `workspaces/`: Implements workspace functionality (e.g., EnsoWorkspaces.mjs, EnsoWorkspace.mjs).
   - `compact-mode/`: Handles compact mode UI.
   - `glance/`: Quick tab preview feature.
-  - `common/`: Shared utilities like ZenUIManager.mjs and ZenStartup.mjs.
+  - `common/`: Shared utilities like EnsoUIManager.mjs and EnsoStartup.mjs.
   - `tabs/`: Tab management, including pinned tabs.
 - **src/browser/**: Browser components with patches (e.g., browser.xhtml patches).
-- **prefs/**: Preference files in YAML format for various features (e.g., zen.yaml for general prefs, glance.yaml for glance feature).
+- **prefs/**: Preference files in YAML format for various features (e.g., enso.yaml for general prefs, glance.yaml for glance feature).
 
 ## How to Patch the Firefox Source Code
 You can create patches on the Firefox source code by modifying the files in the `engine/` directory which is created after you've run the `npm run init` command.
@@ -35,20 +35,20 @@ Preferences in Enso Browser are defined in YAML files under `prefs/`. These are 
 
 ### Steps to Add a New Pref
 1. **Choose or Create a YAML File**: 
-  - For workspace-related prefs, edit `prefs/zen.yaml` or create a new one like `workspaces.yaml` if needed.
+  - For workspace-related prefs, edit `prefs/enso.yaml` or create a new one like `workspaces.yaml` if needed.
   - Example structure in YAML:
     ```yaml
-    - name: zen.workspaces.new-pref
+    - name: enso.workspaces.new-pref
       value: true
     ```
 
 2. **Define the Pref**:
-  - `name`: The preference key (e.g., 'zen.workspaces.enable-feature').
+  - `name`: The preference key (e.g., 'enso.workspaces.enable-feature').
   - `value`: Default value (bool, string, int).
   - *`condition`: Optional*
 
 3. **Integrate in Code**:
-  - Use `Services.prefs.getBoolPref('zen.workspaces.new-pref', defaultValue)` in JavaScript files (e.g., ZenWorkspaces.mjs).
+  - Use `Services.prefs.getBoolPref('enso.workspaces.new-pref', defaultValue)` in JavaScript files (e.g., EnsoWorkspaces.mjs).
 
 4. **Build and Test**:
   - Rebuild the browser.
@@ -58,16 +58,16 @@ Preferences in Enso Browser are defined in YAML files under `prefs/`. These are 
 To add a pref for enabling/disabling the Glance feature:
 - In `prefs/glance.yaml`:
   ```yaml
-  - name: zen.glance.enabled
+  - name: enso.glance.enabled
     value: true
   ```
-- In `src/zen/glance/ZenGlanceManager.mjs`:
+- In `src/enso/glance/EnsoGlanceManager.mjs`:
   ```javascript
-  const glanceEnabled = Services.prefs.getBoolPref('zen.glance.enabled', true);
+  const glanceEnabled = Services.prefs.getBoolPref('enso.glance.enabled', true);
   ```
 
 <Callout type="info" title="Tip">
-  For more details, refer to existing preference definitions in the `prefs/` directory and their corresponding code implementations in `src/zen/`.
+  For more details, refer to existing preference definitions in the `prefs/` directory and their corresponding code implementations in `src/enso/`.
 </Callout>
 
 ## Additional Resources

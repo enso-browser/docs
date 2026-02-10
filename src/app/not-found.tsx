@@ -28,7 +28,7 @@ export default function NotFound() {
         </div>
         <hr />
         <p className="text-[#CBC9BF]">
-          Oops! You&apos;ve wandered off the Zen path. Let&apos;s guide you back
+          Oops! You&apos;ve wandered off the Enso path. Let&apos;s guide you back
           to tranquility.
         </p>
         <Link

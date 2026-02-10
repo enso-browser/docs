@@ -4,7 +4,7 @@ description: Smart navigation with persistent input memory
 ---
 import KeyboardShortcut from '@/components/KeyboardShortcut';
 
-Different from most browsers, Zen uses the **URL bar** as a quick and efficient way to navigate the web, eliminating the need for a dedicated new tab page. 
+Different from most browsers, Enso uses the **URL bar** as a quick and efficient way to navigate the web, eliminating the need for a dedicated new tab page. 
 
 {
 <div align="center">
@@ -15,7 +15,7 @@ Different from most browsers, Zen uses the **URL bar** as a quick and efficient 
 </div>
 }
 
-When you click the **New Tab** button in Zen, the URL bar will pop up on top of your current tab. Simply type your URL or search query into the bar, and hit Enter to search keywords or visit sites directly in a new tab. 
+When you click the **New Tab** button in Enso, the URL bar will pop up on top of your current tab. Simply type your URL or search query into the bar, and hit Enter to search keywords or visit sites directly in a new tab. 
 
 <Callout>
 If you close the URL bar after typing a URL or search query, the text will still be saved unless you navigate to a different URL or refresh the page.
@@ -23,14 +23,14 @@ If you close the URL bar after typing a URL or search query, the text will still
 
 ### Toggle floating behavior of the URL bar
 
-Zen has several floating behaviors for its URL bar, which can be changed in `Settings` > `Look and Feel` > `Zen URL Bar`:
+Enso has several floating behaviors for its URL bar, which can be changed in `Settings` > `Look and Feel` > `Enso URL Bar`:
 - **Floating only when typing** (Default) – The URL bar will float in the center when you access it from the New Tab button or the <KeyboardShortcut shortcut="Ctrl + L" /> keyboard shortcut. But, if you open the URL bar by clicking, it will stick to its regular position at the top.
 - **Always floating** – The URL bar will always float in the center, both from clicking directly, New Tab button, and keyboard shortcuts.
 - **Normal** – The position of the opened URL bar will always be attached to the top, whether accessed by clicking directly, using the New Tab button, or via keyboard shortcuts.
 
 ### Setting default search engine
 
-By default, Zen provides **Google**, **DuckDuckGo**, and **Wikipedia** (English) as default search engine providers. You can choose between Google, DuckDuckGo and *[Ecosia*](https://blog.ecosia.org/ecosia-firefox-switch/)* in the onboarding process after installing Zen. 
+By default, Enso provides **Google**, **DuckDuckGo**, and **Wikipedia** (English) as default search engine providers. You can choose between Google, DuckDuckGo and *[Ecosia*](https://blog.ecosia.org/ecosia-firefox-switch/)* in the onboarding process after installing Enso. 
 
 ![Default search engines during onboarding](/assets/user-manual/urlbar/onboarding-search.png)
 
@@ -90,4 +90,4 @@ Some other configurations you can make with search engines:
 
 The legacy new tab page from Firefox can still be accessed by opening `about:newtab`.
 
-But, if you want to revert the New Tab mechanism, you can do it by accessing Advanced Preferences page (`about:config`). Search for `zen.urlbar.replace-newtab`, and toggle it to `false`. Clicking the New Tab button will open the legacy New Tab page.
+But, if you want to revert the New Tab mechanism, you can do it by accessing Advanced Preferences page (`about:config`). Search for `enso.urlbar.replace-newtab`, and toggle it to `false`. Clicking the New Tab button will open the legacy New Tab page.
