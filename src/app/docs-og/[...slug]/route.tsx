@@ -23,7 +23,7 @@ export const GET = metadataImage.createAPI(async (page) => {
         }}
       >
         <div style={{ position: "absolute", left: "80px", top: "60px" }}>
-          zen docs
+          enso docs
         </div>
         <div
           style={{

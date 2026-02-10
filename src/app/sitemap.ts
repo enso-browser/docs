@@ -14,7 +14,7 @@ interface TreeNode {
 
 function generateSitemap(
   root: TreeNode,
-  baseUrl: string = "https://docs.zen-browser.app"
+  baseUrl: string = "https://docs.enso-browser.app"
 ): MetadataRoute.Sitemap {
   const sitemap: MetadataRoute.Sitemap = [];
 

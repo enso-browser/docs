@@ -19,9 +19,9 @@ export const baseOptions: BaseLayoutProps = {
           aria-label="Logo"
           alt="Logo"
         />
-        zen docs
+        enso docs
       </>
     ),
   },
-  githubUrl: "https://github.com/zen-browser/docs",
+  githubUrl: "https://github.com/enso-browser/docs",
 };

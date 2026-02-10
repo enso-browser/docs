@@ -1,4 +1,4 @@
-name: Deploy Zen Docs
+name: Deploy Enso Docs
 
 on:
   push:

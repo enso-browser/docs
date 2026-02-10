@@ -3,7 +3,7 @@ title: Building Zen
 ---
 import { Tabs, Tab } from 'fumadocs-ui/components/tabs';
 
-We've taken the time to make building Zen Browser as easy as possible, independent of your operating system or technical knowledge.
+We've taken the time to make building Enso Browser as easy as possible, independent of your operating system or technical knowledge.
 
 #### Basic Requirements  
 
@@ -30,7 +30,7 @@ First, let's get your system ready for building Zen.
 
 <Tabs groupId="toolbar" items={['Windows', 'Linux', 'macOS']} persist>
   <Tab value="Windows">
-      <p>Follow the steps below to set up your Windows environment for building Zen Browser:</p>
+      <p>Follow the steps below to set up your Windows environment for building Enso Browser:</p>
       <ol>
         <li>Install [MozillaBuild](https://wiki.mozilla.org/MozillaBuild) and add it to your `PATH`.</li>
         <li>Install [7-Zip](https://www.7-zip.org/) and add it to your `PATH`.</li>
@@ -38,7 +38,7 @@ First, let's get your system ready for building Zen.
       </ol>
   </Tab>
   <Tab value="Linux">
-      <p>Follow the steps below to set up your Linux environment for building Zen Browser:</p>
+      <p>Follow the steps below to set up your Linux environment for building Enso Browser:</p>
       <ol>
         <li>For Debian-based Linux (such as Ubuntu): `sudo apt update && sudo apt install curl python3 python3-pip git sccache`</li>
         <li>For Fedora Linux: `sudo dnf install python3 python3-pip git sccache`</li>
@@ -47,7 +47,7 @@ First, let's get your system ready for building Zen.
       <p><em><b>Note:</b> To avoid permission issues, it's recommended to work within a Python virtual environment.</em></p>
   </Tab>
   <Tab value="macOS">
-      <p>Follow the steps below to set up your macOS environment for building Zen Browser:</p>
+      <p>Follow the steps below to set up your macOS environment for building Enso Browser:</p>
       <ol>
         <li>Install Xcode from the App Store, after that run the following command in your terminal:</li>
         ```
@@ -58,10 +58,10 @@ sudo xcodebuild -license
   </Tab>
 </Tabs>
 
-After having everything set up, you need to clone the Zen Browser repository to your local machine. This will create a local copy of the project that you can work on.
+After having everything set up, you need to clone the Enso Browser repository to your local machine. This will create a local copy of the project that you can work on.
 
 ```bash
-git clone https://github.com/zen-browser/desktop.git --depth 10
+git clone https://github.com/enso-browser/desktop.git --depth 10
 cd desktop
 ```
 
@@ -75,7 +75,7 @@ Once you have cloned the project, navigate to the project directory and install 
 npm i
 ```
 
-This command will install all the packages listed in the `package.json` file, which are required for building and running Zen Browser.
+This command will install all the packages listed in the `package.json` file, which are required for building and running Enso Browser.
 
 ## Step 3: Download and Bootstrap the Browser
 
@@ -95,7 +95,7 @@ Before building the browser, it’s recommended to update the American English l
 python3 ./scripts/update_en_US_packs.py
 ```
 
-This script updates the "en-US" localization files, which are necessary for proper language support in Zen Browser. Running this step ensures that your build includes the latest translations and language resources.
+This script updates the "en-US" localization files, which are necessary for proper language support in Enso Browser. Running this step ensures that your build includes the latest translations and language resources.
 
 ## Step 5: Build the Browser
 
@@ -105,7 +105,7 @@ Now that everything is set up, you can build the browser:
 npm run build
 ```
 
-This command compiles the source code and creates the necessary files for running Zen Browser.
+This command compiles the source code and creates the necessary files for running Enso Browser.
 
 - If your changes are only in JavaScript, you can run the following command after completing the first build for faster rebuilds:  
 

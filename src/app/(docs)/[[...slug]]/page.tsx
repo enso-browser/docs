@@ -60,7 +60,7 @@ export async function generateMetadata(props: {
     description: page.data.description,
     metadataBase:
       process.env.NODE_ENV === "production"
-        ? new URL("https://docs.zen-browser.app")
+        ? new URL("https://docs.enso-browser.app")
         : undefined,
   });
 }
